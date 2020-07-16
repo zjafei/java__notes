@@ -4,6 +4,12 @@ public class Score {
   static int score1 = 86; 
   static int score2 = 92; 
 
+  private int num;
+  
+  public int getNum(){
+    return this.num;
+  }
+
   int sum(){
     int sum = Score.score1 + Score.score2;
     return sum;
