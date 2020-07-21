@@ -5,5 +5,6 @@ public class InitExtend {
     Dog dog = new Dog();
     dog.name = "小狗";
     dog.eat("你的");
+    System.out.println();
   }
 }

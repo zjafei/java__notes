@@ -1,4 +1,4 @@
-package com.l5super;
+package com.l7instanceof;
 
 public class Animal {
   public Animal(){
