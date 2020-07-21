@@ -5,7 +5,6 @@ public class Init {
     Shape shape0 = new Rectangle(20, 10);
     shape0.perimeter();
     shape0.area();
-    
     Shape shape1 = new Circle(10);
     shape1.perimeter();
     shape1.area();
