@@ -31,5 +31,6 @@ public class Init {
     } else {
       System.out.println("欢迎下次光临!!");
     }
+    scan.close();
   }
 }
