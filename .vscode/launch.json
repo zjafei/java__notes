@@ -1,0 +1,189 @@
+{
+  // 使用 IntelliSense 了解相关属性。 
+  // 悬停以查看现有属性的描述。
+  // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Debug (Launch) - Current File",
+      "request": "launch",
+      "mainClass": "${file}"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-HelloWorld<java_notes_57a97017>",
+      "request": "launch",
+      "mainClass": "com.imooc.HelloWorld",
+      "projectName": "java_notes_57a97017"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-InitTelPhone<java_notes_57a97017>",
+      "request": "launch",
+      "mainClass": "com.imooc.InitTelPhone",
+      "projectName": "java_notes_57a97017"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-Score<java_notes_57a97017>",
+      "request": "launch",
+      "mainClass": "com.imooc.Score",
+      "projectName": "java_notes_57a97017"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-InitTelPhone<java_notes_57a97017>(1)",
+      "request": "launch",
+      "mainClass": "com.l0.InitTelPhone",
+      "projectName": "java_notes_57a97017"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-Init<java_notes_57a97017>",
+      "request": "launch",
+      "mainClass": "com.l10interface.Init",
+      "projectName": "java_notes_57a97017"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-Init<java_notes_57a97017>(1)",
+      "request": "launch",
+      "mainClass": "com.l11person.Init",
+      "projectName": "java_notes_57a97017"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-Init<java_notes_57a97017>(2)",
+      "request": "launch",
+      "mainClass": "com.l12.Init",
+      "projectName": "java_notes_57a97017"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-TryCatchFinally<java_notes_57a97017>",
+      "request": "launch",
+      "mainClass": "com.l13trycatchfinally.TryCatchFinally",
+      "projectName": "java_notes_57a97017"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-StringTest<java_notes_57a97017>",
+      "request": "launch",
+      "mainClass": "com.l14string.StringTest",
+      "projectName": "java_notes_57a97017"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-Test<java_notes_57a97017>",
+      "request": "launch",
+      "mainClass": "com.l15stringbuilder.Test",
+      "projectName": "java_notes_57a97017"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-Test<java_notes_57a97017>(1)",
+      "request": "launch",
+      "mainClass": "com.l16classbuff.Test",
+      "projectName": "java_notes_57a97017"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-Test<java_notes_57a97017>(2)",
+      "request": "launch",
+      "mainClass": "com.l17date.Test",
+      "projectName": "java_notes_57a97017"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-Test<java_notes_57a97017>(3)",
+      "request": "launch",
+      "mainClass": "com.l18math.Test",
+      "projectName": "java_notes_57a97017"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-CourseList<java_notes_57a97017>",
+      "request": "launch",
+      "mainClass": "com.l20collection_map.CourseList",
+      "projectName": "java_notes_57a97017"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-HelloWorld<java_notes_57a97017>(1)",
+      "request": "launch",
+      "mainClass": "com.l2inner_class.HelloWorld",
+      "projectName": "java_notes_57a97017"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-Outer<java_notes_57a97017>",
+      "request": "launch",
+      "mainClass": "com.l2inner_class.Outer",
+      "projectName": "java_notes_57a97017"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-StaticInner<java_notes_57a97017>",
+      "request": "launch",
+      "mainClass": "com.l2inner_class.StaticInner",
+      "projectName": "java_notes_57a97017"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-TestPage<java_notes_57a97017>",
+      "request": "launch",
+      "mainClass": "com.l2inner_class.TestPage",
+      "projectName": "java_notes_57a97017"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-TestPage1<java_notes_57a97017>",
+      "request": "launch",
+      "mainClass": "com.l2inner_class.TestPage1",
+      "projectName": "java_notes_57a97017"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-InitExtend<java_notes_57a97017>",
+      "request": "launch",
+      "mainClass": "com.l3extend.InitExtend",
+      "projectName": "java_notes_57a97017"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-InitExtend<java_notes_57a97017>(1)",
+      "request": "launch",
+      "mainClass": "com.l5super.InitExtend",
+      "projectName": "java_notes_57a97017"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-Init<java_notes_57a97017>(3)",
+      "request": "launch",
+      "mainClass": "com.l6.Init",
+      "projectName": "java_notes_57a97017"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-InitExtend<java_notes_57a97017>(2)",
+      "request": "launch",
+      "mainClass": "com.l7instanceof.InitExtend",
+      "projectName": "java_notes_57a97017"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-Init<java_notes_57a97017>(4)",
+      "request": "launch",
+      "mainClass": "com.l8abstract.Init",
+      "projectName": "java_notes_57a97017"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-Init<java_notes_57a97017>(5)",
+      "request": "launch",
+      "mainClass": "com.l9shape.Init",
+      "projectName": "java_notes_57a97017"
+    }
+  ]
+}
