@@ -4,7 +4,9 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Iterator;
 import java.util.Arrays;
-import java.util.Scanner;
+import java.util.Collections;
+import java.util.Comparator;
+// import java.util.Scanner;
 
 public class CourseList {
   private ArrayList<Course> list = new ArrayList<Course>();
@@ -86,11 +88,48 @@ public class CourseList {
     }
   };
 
+  public void studentSort() {
+    ArrayList<Student> students = new ArrayList<Student>();
+    students.add(new Student("2", "eric"));
+    students.add(new Student("4", "tom"));
+    students.add(new Student("3", "bob"));
+    students.add(new Student("1", "polo"));
+    System.out.println("------------------排序前------------");
+    for (Student student : students) {
+      System.out.println(student.getId() + " " + student.getName());
+    }
+
+    System.out.println("------------------排序后------------");
+    Collections.sort(students);
+    for (Student student : students) {
+      System.out.println(student.getId() + " " + student.getName());
+    }
+
+    System.out.println("------------------自定义排序后------------");
+    Collections.sort(students, new Comparator<Student>() {
+      @Override
+      public int compare(Student s1, Student s2) {
+        /* 按员工编号正序排序 */
+        // return o1.getEmpno()-o2.getEmpno();
+        /* 按员工编号逆序排序 */
+        // return o2.getEmpno()-o1.getEmpno();
+        /* 按员工姓名正序排序 */
+        return s1.getName().compareTo(s2.getName());
+        /* 按员工姓名逆序排序 */
+        // return o2.getEname().compareTo(o1.getEname());
+      }
+    });
+    for (Student student : students) {
+      System.out.println(student.getId() + " " + student.getName());
+    }
+  }
+
   public static void main(String[] args) {
+    // this.studentSort();
     CourseList l = new CourseList();
     // StudentList sl = new StudentList();
-
-    Student s = new Student(l.getUUID(), "小马");
+    l.studentSort();
+    // Student s = new Student(l.getUUID(), "小马");
     // Student s1 = new Student(l.getUUID(), "小王");
     // Student s2 = new Student(l.getUUID(), "小明");
 
@@ -109,36 +148,36 @@ public class CourseList {
     // System.out.println("--------------------------");
 
     // l.addCourse("前端知识");
-    l.addCourses(new String[] { "C语言", "数据结构", "高等数学", "大学英语", "离散数学", "汇编语言" });
-    l.showList();
-    Course c = l.list.get(2);
-    l.hasCourse(new Course(c.getId(), c.getName()));
-    System.out.println("欢迎" + s.getName() + "(学号:" + s.getId() + ")同学来选课:");
+    // l.addCourses(new String[] { "C语言", "数据结构", "高等数学", "大学英语", "离散数学", "汇编语言" });
+    // l.showList();
+    // Course c = l.list.get(2);
+    // l.hasCourse(new Course(c.getId(), c.getName()));
+    // System.out.println("欢迎" + s.getName() + "(学号:" + s.getId() + ")同学来选课:");
 
-    Scanner scan = new Scanner(System.in);
-    int i = 0;
-    while (i < 3) {
-      int num = i + 1;
-      System.out.println("请输入第" + num + "门科的序号: ");
-      String no = scan.next();
-      if (l.isNumeric(no)) {
-        int noInt = Integer.parseInt(no) - 1;
-        if (noInt < 0 || noInt >= l.list.size()) {
-          System.out.println("输入有误");
-        } else {
-          s.selectCourse(l.list.get(noInt));
-          i = i + 1;
-        }
+    // Scanner scan = new Scanner(System.in);
+    // int i = 0;
+    // while (i < 3) {
+    // int num = i + 1;
+    // System.out.println("请输入第" + num + "门科的序号: ");
+    // String no = scan.next();
+    // if (l.isNumeric(no)) {
+    // int noInt = Integer.parseInt(no) - 1;
+    // if (noInt < 0 || noInt >= l.list.size()) {
+    // System.out.println("输入有误");
+    // } else {
+    // s.selectCourse(l.list.get(noInt));
+    // i = i + 1;
+    // }
 
-      } else {
-        System.out.println("输入有误");
-        System.out.println("请重新输入第" + num + "门科的序号: ");
-      }
-    }
-    scan.close();
-    System.out.println(s.getName() + "(学号:" + s.getId() + ")同学选择了以下课程:");
-    s.showSelectCourse();
-    s.hasCourse(new Course(c.getId(), c.getName()));
+    // } else {
+    // System.out.println("输入有误");
+    // System.out.println("请重新输入第" + num + "门科的序号: ");
+    // }
+    // }
+    // scan.close();
+    // System.out.println(s.getName() + "(学号:" + s.getId() + ")同学选择了以下课程:");
+    // s.showSelectCourse();
+    // s.hasCourse(new Course(c.getId(), c.getName()));
     // System.out.println("------------------------------------");
     // l.modify(1, "sss");
     // l.showList();

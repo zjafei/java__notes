@@ -3,7 +3,8 @@ package com.l20collection_map;
 import java.util.Set;
 import java.util.HashSet;
 
-public class Student {
+// public class Student {
+public class Student implements Comparable<Student>{
   /**
    * 学生类
    */
@@ -50,6 +51,11 @@ public class Student {
     int result = 1;
     result = prime * result + ((this.name == null) ? 0 : this.name.hashCode());
     return result;
+  }
+
+  @Override
+  public int compareTo(Student o) {    
+    return this.getId().compareTo(o.getId());
   }
 
   @Override
