@@ -23,6 +23,14 @@ public class CourseList {
     return true;
   }
 
+  public boolean hasCourse(Course course) {
+    boolean b = this.list.contains(course);
+    System.out.println(
+        "备选课程中" + (b == true ? "第" + (this.list.indexOf(course) + 1) + "位置" : "不") + "包含课程: " + course.getName());
+    System.out.println();
+    return b;
+  }
+
   public void showList() {
     Iterator<Course> it = this.list.iterator();
     int i = 1;
@@ -80,29 +88,31 @@ public class CourseList {
 
   public static void main(String[] args) {
     CourseList l = new CourseList();
-    StudentList sl = new StudentList();
+    // StudentList sl = new StudentList();
 
     Student s = new Student(l.getUUID(), "小马");
-    Student s1 = new Student(l.getUUID(), "小王");
-    Student s2 = new Student(l.getUUID(), "小明");
-    
-    sl.addStudent(s);
-    sl.addStudent(s1);
-    sl.addStudent(s2);
-    sl.showList();
-    System.out.println("--------------------------");
+    // Student s1 = new Student(l.getUUID(), "小王");
+    // Student s2 = new Student(l.getUUID(), "小明");
 
-    sl.deleteStudent(s1.getId());
-    sl.showList();
-    System.out.println("--------------------------");
+    // sl.addStudent(s);
+    // sl.addStudent(s1);
+    // sl.addStudent(s2);
+    // sl.showList();
+    // System.out.println("--------------------------");
 
-    sl.setStudent(s.getId(), s2);
-    sl.showList();
-    System.out.println("--------------------------");
+    // sl.deleteStudent(s1.getId());
+    // sl.showList();
+    // System.out.println("--------------------------");
+
+    // sl.setStudent(s.getId(), s2);
+    // sl.showList();
+    // System.out.println("--------------------------");
 
     // l.addCourse("前端知识");
     l.addCourses(new String[] { "C语言", "数据结构", "高等数学", "大学英语", "离散数学", "汇编语言" });
     l.showList();
+    Course c = l.list.get(2);
+    l.hasCourse(new Course(c.getId(), c.getName()));
     System.out.println("欢迎" + s.getName() + "(学号:" + s.getId() + ")同学来选课:");
 
     Scanner scan = new Scanner(System.in);
@@ -128,7 +138,7 @@ public class CourseList {
     scan.close();
     System.out.println(s.getName() + "(学号:" + s.getId() + ")同学选择了以下课程:");
     s.showSelectCourse();
-
+    s.hasCourse(new Course(c.getId(), c.getName()));
     // System.out.println("------------------------------------");
     // l.modify(1, "sss");
     // l.showList();

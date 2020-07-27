@@ -1,5 +1,9 @@
 package com.l20collection_map;
 
+import java.util.Map.Entry;
+
+import javax.xml.crypto.KeySelector.Purpose;
+
 import java.util.HashMap;
 
 public class StudentList {
@@ -44,13 +48,36 @@ public class StudentList {
     return s;
   }
 
+  public void hasStudentByKey(String studentId){
+    if(this.list.containsKey(studentId) == true){
+      System.out.println("学生为:" + this.list.get(studentId).getName());
+    }else{
+      System.out.println("学生不存在!");
+    }
+  }
+
+  public void hasStudentByName(String studentName){
+    if(this.list.containsValue(new Student(null, studentName)) == true){
+      System.out.println("学生为:" + studentName);
+    }else{
+      System.out.println("学生不存在!");
+    }
+  }
+
   public void showList() {
     int i = 1;
-    for (String key : this.list.keySet()) {
-      Student s = this.list.get(key);
+
+    for (Entry<String, Student> studentEntry : this.list.entrySet()) {
+      Student s = studentEntry.getValue();
       System.out.println(i + ". " + s.getName() + "(" + s.getId() + ")");
       i = i + 1;
     }
+
+    // for (String key : this.list.keySet()) {
+    // Student s = this.list.get(key);
+    // System.out.println(i + ". " + s.getName() + "(" + s.getId() + ")");
+    // i = i + 1;
+    // }
   }
 
   public HashMap<String, Student> getList() {
